@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-
+import Home from './pages/Home';
+import Products from './pages/products';
+import Header from './components/Header';
+import AddProduct from './pages/AddProduct';
+import "primereact/resources/themes/lara-light-cyan/theme.css";
+import "primereact/resources/primereact.min.css";
+import { saveProducts } from './utilities/saveProducts';
+import products from './data/products';
 function App() {
+  if (!localStorage.getItem('products')) {
+    saveProducts(products)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/products' element={<Products />} />
+          <Route path='/products/add-product' element={<AddProduct />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
