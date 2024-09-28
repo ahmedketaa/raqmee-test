@@ -105,7 +105,7 @@ const products = [
        photo:"p1.png"
   },
   {
-      name: "Samsung Galaxy Watch 4",
+      name: "T-shirt",
       price: 250,
       category: "Clothes",
       description: "Wear OS smartwatch with advanced health monitoring features.",
