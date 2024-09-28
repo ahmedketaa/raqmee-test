@@ -19,4 +19,4 @@ This project is a simple product management application where users can add prod
 
 ## Live Preview
 
-You can view the live version of the application [here](https://your-app-name.vercel.app/).
+You can view the live version of the application [here](https://raqmee-test.vercel.app/).
