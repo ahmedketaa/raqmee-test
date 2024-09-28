@@ -8,6 +8,7 @@ function ProductCard({ name, price, category, desc, photo }) {
         src={photo || "p1.png"}
         alt="product"
         className="w-[300px] h-[280px] rounded"
+        loading="lazy" 
       />
       <div className="flex justify-between items-center ">
         <div className="text">
